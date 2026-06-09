@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  *, *::before, *::after {
+    box-sizing: border-box;
+  }
+
+  body {
+    @apply text-gray-900 antialiased;
+  }
+}
+
+@layer utilities {
+  .animate-in {
+    animation-duration: 200ms;
+    animation-fill-mode: both;
+  }
+
+  @keyframes slide-in-from-right {
+    from { transform: translateX(100%); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+  }
+
+  .slide-in-from-right {
+    animation-name: slide-in-from-right;
+  }
+}
