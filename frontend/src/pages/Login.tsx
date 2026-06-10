@@ -30,19 +30,19 @@ const Login: React.FC = () => {
   });
 
   // Demo credentials helper
-  const fillDemo = (email: string) => {
-    // Hack to set form values for demo
-    const emailEl = document.querySelector<HTMLInputElement>('[name="email"]');
-    const passEl = document.querySelector<HTMLInputElement>('[name="password"]');
-    if (emailEl) { emailEl.value = email; emailEl.dispatchEvent(new Event('input', { bubbles: true })); }
-    if (passEl) { passEl.value = 'password123'; passEl.dispatchEvent(new Event('input', { bubbles: true })); }
-  };
+  // const fillDemo = (email: string) => {
+  //   // Hack to set form values for demo
+  //   const emailEl = document.querySelector<HTMLInputElement>('[name="email"]');
+  //   const passEl = document.querySelector<HTMLInputElement>('[name="password"]');
+  //   if (emailEl) { emailEl.value = email; emailEl.dispatchEvent(new Event('input', { bubbles: true })); }
+  //   if (passEl) { passEl.value = 'password123'; passEl.dispatchEvent(new Event('input', { bubbles: true })); }
+  // };
 
   return (
     <div className="min-h-screen bg-gray-50 flex items-center justify-center p-4">
       <div className="w-full max-w-sm">
         {/* Demo credentials box */}
-        <div className="bg-blue-50 border border-blue-200 rounded-xl p-4 mb-6 text-sm">
+        {/* <div className="bg-blue-50 border border-blue-200 rounded-xl p-4 mb-6 text-sm">
           <p className="font-semibold text-blue-800 mb-2">🧪 Demo Accounts (password: password123)</p>
           <div className="grid grid-cols-2 gap-1">
             {[
@@ -72,7 +72,7 @@ const Login: React.FC = () => {
               </button>
             ))}
           </div>
-        </div>
+        </div> */}
 
         <div className="bg-white rounded-xl border border-gray-200 shadow-sm p-6">
           <h1 className="text-xl font-bold text-gray-900 mb-6 text-center">Sign In</h1>
