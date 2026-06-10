@@ -1,6 +1,6 @@
 import { useState, useCallback, useRef, useEffect } from 'react';
 import { ZodSchema } from 'zod';
-import { useAuthStore, Role } from '../stores/authStore';
+import { useAuthStore, Role } from '@/stores/authStore';
 
 // ── useForm ───────────────────────────────────────────────────────────────────
 // Custom form hook with zod validation — replaces react-hook-form

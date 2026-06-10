@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react';
-import { useCommentStore } from '../stores/commentStore';
+import { useCommentStore } from '@/stores/commentStore';
 import { CommentItem } from './CommentItem';
 import { Button, FormTextarea } from './ui';
-import { useRole, useForm, toast } from '../hooks';
-import { CommentSchema } from '../schemas';
+import { useRole, useForm, toast } from '@/hooks';
+import { CommentSchema } from '@/schemas';
 
 interface CommentsSectionProps {
   postId: string;

@@ -1,9 +1,9 @@
 import React from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import { useAuthStore } from '../stores/authStore';
-import { useRole } from '../hooks';
+import { useAuthStore } from '@/stores/authStore';
+import { useRole } from '@/hooks';
 import { Button, RoleBadge } from './ui';
-import { toast } from '../hooks';
+import { toast } from '@/hooks';
 
 export const Navbar: React.FC = () => {
   const { user, logout } = useAuthStore();

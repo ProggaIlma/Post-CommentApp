@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
-import { Comment } from '../stores/commentStore';
+import { Comment } from '@/stores/commentStore';
 import { Button, RoleBadge } from './ui';
-import { useRole } from '../hooks';
-import { toast } from '../hooks';
-import { useCommentStore } from '../stores/commentStore';
+import { useRole } from '@/hooks';
+import { toast } from '@/hooks';
+import { useCommentStore } from '@/stores/commentStore';
 
 interface CommentItemProps {
   comment: Comment;

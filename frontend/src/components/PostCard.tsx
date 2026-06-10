@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
-import { Post, usePostStore } from '../stores/postStore';
+import { Post, usePostStore } from '@/stores/postStore';
 import { Button, Modal, FormInput, FormTextarea, RoleBadge } from './ui';
 import { CommentsSection } from './CommentsSection';
-import { useRole, useForm, toast } from '../hooks';
-import { PostSchema } from '../schemas';
+import { useRole, useForm, toast } from '@/hooks';
+import { PostSchema } from '@/schemas';
 
 interface PostCardProps {
   post: Post;

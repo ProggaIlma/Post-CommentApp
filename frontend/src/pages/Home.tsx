@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react';
-import { usePostStore } from '../stores/postStore';
-import { PostCard } from '../components/PostCard';
-import { Button, Modal, FormInput, FormTextarea, Pagination } from '../components/ui';
-import { useRole, useForm, toast } from '../hooks';
-import { PostSchema } from '../schemas';
+import { usePostStore } from '@/stores/postStore';
+import { PostCard } from '@/components/PostCard';
+import { Button, Modal, FormInput, FormTextarea, Pagination } from '@/components/ui';
+import { useRole, useForm, toast } from '@/hooks';
+import { PostSchema } from '@/schemas';
 
 const Home: React.FC = () => {
   const { posts, loading, error, currentPage, totalPages, total, fetchPosts, createPost } = usePostStore();

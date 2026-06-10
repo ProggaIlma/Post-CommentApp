@@ -3,8 +3,8 @@ import { JwtService } from '@nestjs/jwt';
 import { PassportStrategy } from '@nestjs/passport';
 import { ExtractJwt, Strategy } from 'passport-jwt';
 import * as bcrypt from 'bcrypt';
-import { PrismaService } from '../prisma.service';
-import { RegisterDto, LoginDto } from '../dto';
+import { PrismaService } from '@/prisma.service';
+import { RegisterDto, LoginDto } from '@/dto';
 
 @Injectable()
 export class JwtStrategy extends PassportStrategy(Strategy) {

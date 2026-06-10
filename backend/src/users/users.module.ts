@@ -10,10 +10,10 @@ import {
   UseGuards,
   Module,
 } from '@nestjs/common';
-import { PrismaService } from '../prisma.service';
-import { PaginationDto } from '../dto';
-import { JwtAuthGuard, RolesGuard } from '../guards';
-import { CurrentUser, Roles } from '../decorators';
+import { PrismaService } from '@/prisma.service';
+import { PaginationDto } from '@/dto';
+import { JwtAuthGuard, RolesGuard } from '@/guards';
+import { CurrentUser, Roles } from '@/decorators';
 
 @Injectable()
 export class UsersService {

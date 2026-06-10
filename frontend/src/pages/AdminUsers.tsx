@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { usersApi } from '../services/api';
-import { Button, Pagination, RoleBadge } from '../components/ui';
-import { useRole, toast } from '../hooks';
-import { useAuthStore } from '../stores/authStore';
+import { usersApi } from '@/services/api';
+import { Button, Pagination, RoleBadge } from '@/components/ui';
+import { useRole, toast } from '@/hooks';
+import { useAuthStore } from '@/stores/authStore';
 
 interface User {
   id: string;

@@ -13,10 +13,10 @@ import {
   UseGuards,
   Module,
 } from '@nestjs/common';
-import { PrismaService } from '../prisma.service';
-import { CreatePostDto, UpdatePostDto, PaginationDto } from '../dto';
-import { JwtAuthGuard, RolesGuard } from '../guards';
-import { CurrentUser, Public, Roles } from '../decorators';
+import { PrismaService } from '@/prisma.service';
+import { CreatePostDto, UpdatePostDto, PaginationDto } from '@/dto';
+import { JwtAuthGuard, RolesGuard } from '@/guards';
+import { CurrentUser, Public, Roles } from '@/decorators';
 
 @Injectable()
 export class PostsService {

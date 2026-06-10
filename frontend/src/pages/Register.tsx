@@ -1,10 +1,10 @@
 import React from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import { useAuthStore } from '../stores/authStore';
-import { authApi } from '../services/api';
-import { FormInput, Button } from '../components/ui';
-import { useForm, toast } from '../hooks';
-import { RegisterSchema } from '../schemas';
+import { useAuthStore } from '@/stores/authStore';
+import { authApi } from '@/services/api';
+import { FormInput, Button } from '@/components/ui';
+import { useForm, toast } from '@/hooks';
+import { RegisterSchema } from '@/schemas';
 
 const Register: React.FC = () => {
   const { login } = useAuthStore();

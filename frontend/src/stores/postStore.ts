@@ -1,5 +1,5 @@
 import { create } from 'zustand';
-import { postsApi } from '../services/api';
+import { postsApi } from '@/services/api';
 
 export interface Post {
   id: string;

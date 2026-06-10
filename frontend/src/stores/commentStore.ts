@@ -1,5 +1,5 @@
 import { create } from 'zustand';
-import { commentsApi } from '../services/api';
+import { commentsApi } from '@/services/api';
 
 export interface Comment {
   id: string;
