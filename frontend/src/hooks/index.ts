@@ -23,7 +23,7 @@ export function useForm<T extends Record<string, string>>(
         if (result.success) {
           setErrors((prev) => ({ ...prev, [name]: undefined }));
         } else {
-          const fieldErr = result.error.flatten().fieldErrors[name]?.[0];
+          const fieldErr = result.error.flatten().fieldErrors[name as keyof T]?.[0];
           setErrors((prev) => ({ ...prev, [name]: fieldErr }));
         }
       }
@@ -37,7 +37,7 @@ export function useForm<T extends Record<string, string>>(
       setTouched((prev) => ({ ...prev, [name]: true }));
       const result = schema.safeParse({ ...values, [name]: value });
       if (!result.success) {
-        const fieldErr = result.error.flatten().fieldErrors[name]?.[0];
+        const fieldErr = result.error.flatten().fieldErrors[name as keyof T]?.[0];
         setErrors((prev) => ({ ...prev, [name]: fieldErr }));
       }
     },

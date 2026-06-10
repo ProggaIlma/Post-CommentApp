@@ -19,7 +19,13 @@ const Login: React.FC = () => {
       toast.success(`Welcome back, ${data.user.email}!`);
       navigate('/');
     } catch (err: any) {
-      toast.error(err.response?.data?.message || 'Login failed');
+      // Extract error message from various response formats
+      const errorMsg = 
+        err.response?.data?.message || 
+        err.response?.data?.error || 
+        err.message || 
+        'Login failed';
+      toast.error(errorMsg);
     }
   });
 

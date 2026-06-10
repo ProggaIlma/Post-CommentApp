@@ -19,7 +19,13 @@ const Register: React.FC = () => {
       toast.success('Account created! Welcome aboard!');
       navigate('/');
     } catch (err: any) {
-      toast.error(err.response?.data?.message || 'Registration failed');
+      // Extract error message from various response formats
+      const errorMsg = 
+        err.response?.data?.message || 
+        err.response?.data?.error || 
+        err.message || 
+        'Registration failed';
+      toast.error(errorMsg);
     }
   });
 
